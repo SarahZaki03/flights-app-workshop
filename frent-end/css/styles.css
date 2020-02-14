@@ -1,0 +1,263 @@
+/* Start Global */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    direction: ltr;
+    font-family: 'Noto Sans JP', sans-serif;
+	color: #2C2F90;
+    transition: .5s;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+select{
+	outline: none;
+}
+/* Header Style --- START */
+.header{
+	display: flex;
+	justify-content: space-between;
+    width: 100%;
+	padding: .7em 4em;
+	color: #2C2F90; /* if you change this color --> you will change the border color and the <a> color also --> and this from the DRY concept, means don't repeat your self */
+    border-bottom: 1px solid currentColor;
+}
+.header > nav{
+	display: flex;
+	margin-top: 2.3em;
+}
+@media only screen and (max-width: 600px) {
+  .header > nav {
+    flex-direction: column;
+  }
+  .links > a{
+	    margin-bottom: 0.5em!important;
+  }
+}
+.links > a{
+	color: currentColor;
+	font-size: 1.3em;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 100;
+    margin: 0 1em;
+	height: 40px;
+	background: linear-gradient(45deg, #2C2F90, #2C2F90) no-repeat;
+    background-size: 0% 2px;
+    background-position: bottom;
+	transition: background-size .5s;
+}
+.links > a:hover{  
+    background-size: 100% 2px;
+}
+.lang{
+	width: 55px;
+    height: 25px;
+    margin-top: 3px;
+	margin-left: 2em;
+    background: #2C2F90;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+/* Header Style --- END */
+/* -------------------------------------- */
+/* Home Style --- START */
+#home{
+	display: flex;
+	color: #2c2f90;
+	background-image: linear-gradient(30deg, #2C2F90 23%, transparent 0);
+}
+#home img{
+	max-width: 45%;
+}
+.overlay-l{
+	padding: 2em;
+    margin-left: 5%;
+}
+.overlay-l > h1{
+	font-size: 4vw;
+    font-style: italic;
+}
+.overlay-l > p, .about-explain > p{
+	color: #757575;
+    letter-spacing: .5pt; 
+    font-weight: 300;
+	font-size: 1.5vw;
+}
+.overlay-l > a, #btn-book, .about-explain > a, #send{
+	letter-spacing: 1pt;
+    text-transform: uppercase;
+    color: white;
+    background-color: #2C2F90;
+    display: block;
+    width: 17vw;
+    margin: 1.5em auto;
+    font-size: 1.5vw;
+    font-weight: 600;
+    text-align: center;
+    padding: .8em 1em;
+    border: 2px solid currentColor;
+    border-radius: 30px;
+	transition: .5s;
+}
+.overlay-l > a:hover, #btn-book:hover, .about-explain > a:hover,  #send:hover{
+	color: #2C2F90;
+    background-color: white;
+	transform: translateY(-5px);
+}
+/* Home Style --- END */
+
+/* Form Style --- START */
+.book{
+	background: url(../image/undraw_aircraft_fbvl.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+	text-align: center;
+    margin: 4em auto;
+	padding: 2em 0;
+	position: relative;
+}
+.book > h3{
+	font-size: 4vw;
+}
+.form-box > input{
+    border-radius: 10px;
+    margin: 20px;
+    width: 400px;
+    height: 40px;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    color: #2C2F90;
+	border: 2px solid currentColor;
+}
+/* Form Style --- END */
+
+/* About & Contact Us Style --- START */
+.about, .contact{
+	display: flex;
+	justify-content: space-around;
+	margin: 4em auto;
+}
+.about > div{
+	width: 45%;
+}
+.about-img{
+	text-align: center;
+}
+.about-img img, .contact-img img{
+	width: 100%;
+    margin-top: 4em;
+}
+.about-explain, .contact-us{
+	padding: 0 2em;
+}
+.about-explain > h2, .contact-us > h2{
+	letter-spacing: 1pt;
+	font-style: italic;
+} 
+.about-explain > a{
+	letter-spacing: 1pt;
+}
+.about-explain i, #send i{
+	padding-left: .7em;
+}
+.contact > div{
+	width: 50%;
+	
+}
+.contact-img{
+	margin-left: -10%;
+}
+.contact-img img{
+	transform: rotate(10deg);
+}
+.contact-form > input, .contact-form > textarea{
+	width: 80%;
+	display: block;
+	margin: 0 auto 2em;
+	border: none;
+	color: #2C2F90;
+	letter-spacing: 1pt;
+	border-bottom: 2px solid currentColor;
+	padding: .4em 1em;
+}
+/* About & Contact Us Style --- END */
+
+/* Footer Style --- START */
+.footer{
+	background-color: #232323;
+}
+.footer-container{
+	display: flex;
+	justify-content: space-around;
+}
+.footer-container .footer-col{
+	width: 20%;
+	color: #757575;
+}
+.footer-container a{
+	color: #757575;
+	display: block;
+	margin-top: .5em;
+}
+.footer-container a:after{
+	content: '\A';
+}
+.footer-container h2{
+	color: white;
+	letter-spacing: 2pt;
+}
+.footer-icons{
+	margin: 1em 5%;
+}
+.footer-icons > i{
+	background-color: #b2b2b226;
+	color: #757575;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding-top: 13px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+	cursor: pointer;
+	transition: .5s;
+}
+.footer-icons i:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 5px 0px #fff;
+}
+.footer-icons i.fa-facebook:hover{
+    background-color: #385899;
+    color: #fff;
+}
+.footer-icons i.fa-instagram:hover{
+    background-color: #e53278;
+    color: #fff;
+}
+.footer-icons i.fa-twitter:hover{
+    background-color: #29a4da;
+    color: #fff;
+}
+.footer-icons i.fa-youtube:hover{
+    background-color: #d64c40;
+    color: #fff;
+}
+.copy-right{
+	color: white;
+	font-weight: 100;
+	border-top: 1px solid #fff;
+	text-align: center;
+	padding: .5em 0;
+	letter-spacing: 1pt;
+}
+/* Footer Style --- END */
